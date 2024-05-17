@@ -21,16 +21,16 @@ body, html{
 .Header-Nav-Item{
     height: min-content;
     display: flex;
+    text-decoration: none;
 }
 
 .Header-Nav-Item a{
     color: whitesmoke;
-    text-decoration: none;
+    text-decoration: none !important;
     margin: 0 10px;
     transition: color 0.5s ease;
     font-family: nunito;
     font-size: var(--maxFontSize);
-
 }
 
 .Header-Nav-Item a:hover {

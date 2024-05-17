@@ -1,11 +1,13 @@
 import * as React from "react";
 import personalLogo from "../assets/Images/personalLogo.png";
 import currentImageofMe from "../assets/Images/currentImageofMe.jpeg";
-
 import { Link, useLocation } from "react-router-dom";
 import Header from "../components/Header";
 //bootstrap import
 import "bootstrap/dist/css/bootstrap.min.css";
+
+//importing css
+import "../css/stylings.css";
 
 function Home() {
   return (
