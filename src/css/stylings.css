@@ -1,104 +1,196 @@
-body, html{
-    margin: 0;
-    padding: 0;
-    min-width: var(--minWidth);
+@import "@fontsource/nunito"; /* Importing the Nunito font */
+
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  min-width: var(--minWidth);
 }
 
-:root{
-    --minWidth: 360px;
-    --maxWidth: 1920px;
-    --minFontSize: 15px;
-    --maxFontSize: 30px;
-    --minImageSize: 100px; /* Minimum image size */
-    --maxImageSize: 300px; /* Maximum image size */
-}
-.Header-Container{
-    z-index: 1000;
-    transition: background-color 0.5s ease;
-    color: rgb(21,68,163)    
+:root {
+  --font1: "Nunito";
+  --minWidth: 360px;
+  --maxWidth: 1920px;
+  --minFontSize: 15px;
+  --maxFontSize: 30px;
+  --minImageSize: 100px; /* Minimum image size */
+  --maxImageSize: 300px; /* Maximum image size */
 }
 
-.Header-Nav-Item{
-    height: min-content;
-    display: flex;
-    text-decoration: none;
+.Home-Continaer {
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(11,57,72);
+  overflow: hidden; 
 }
 
-.Header-Nav-Item a{
-    color: whitesmoke;
-    text-decoration: none !important;
-    margin: 0 10px;
-    transition: color 0.5s ease;
-    font-family: nunito;
-    font-size: var(--maxFontSize);
+.Intro-Container{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(240, 235, 216);
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+  width: 100%;
+}
+
+.Intro-Inner-Container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.Intro-Nav-Container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: min-content;
+  width: 100%;
+  position: relative;
+
+
+}
+
+.Header-Nav-Item {
+  height: min-content;
+  display: flex;
+  text-decoration: none;
+}
+
+.Header-Nav-Item a {
+  color: rgb(62, 92, 118);
+  text-decoration: none ;
+  margin: 0 10px;
+  transition: color 0.5s ease;
+  font-family: nunito;
+  font-size: var(--maxFontSize);
+  font-weight: 600;
 }
 
 .Header-Nav-Item a:hover {
-    color: rgb(21,68,163);
+  color: rgb(21, 68, 163);
+}
+
+.Intro-Content-Container{
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  height: min-content;
+  align-items: center;
+  color: rgb(62, 92, 118);
+  font-family: var(--font1);
+}
+
+.Intro-Buttons{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.Intro-Buttons .btn{
+  color: white;
 }
 
 .Intro-Image-Container img {
-    max-height: var(--maxImageSize); /* Set maximum height for the image */
+  max-height: var(--maxImageSize); /* Set maximum height for the image */
 }
+
+
 
 /* Media query for adjusting font size based on screen width */
 @media (max-width: 1200px) {
   .Header-Nav-Item a {
-    font-size: calc(var(--maxFontSize) * 0.9); /* Adjust font size based on screen width */
+    font-size: calc(
+      var(--maxFontSize) * 0.9
+    ); /* Adjust font size based on screen width */
   }
 }
 
 @media (max-width: 992px) {
   .Header-Nav-Item a {
-    font-size: calc(var(--maxFontSize) * 0.8); /* Adjust font size based on screen width */
+    font-size: calc(
+      var(--maxFontSize) * 0.8
+    ); /* Adjust font size based on screen width */
   }
 }
 
 @media (max-width: 768px) {
   .Header-Nav-Item a {
-    font-size: calc(var(--maxFontSize) * 0.7); /* Adjust font size based on screen width */
+    font-size: calc(
+      var(--maxFontSize) * 0.7
+    ); /* Adjust font size based on screen width */
   }
 }
 
 @media (max-width: 576px) {
   .Header-Nav-Item a {
-    font-size: calc(var(--maxFontSize) * 0.6); /* Adjust font size based on screen width */
+    font-size: calc(
+      var(--maxFontSize) * 0.6
+    ); /* Adjust font size based on screen width */
   }
 }
 
 @media (max-width: 400px) {
   .Header-Nav-Item a {
-    font-size: var(--minFontSize); /* Set font size to min font size for very small screens */
+    font-size: var(
+      --minFontSize
+    ); /* Set font size to min font size for very small screens */
   }
 }
 
 /* Media query for adjusting image size based on screen width */
 @media (max-width: 1200px) {
   .Intro-Image-Container img {
-    max-height: calc(var(--maxImageSize) * 0.9); /* Adjust image size based on screen width */
+    max-height: calc(
+      var(--maxImageSize) * 0.9
+    ); /* Adjust image size based on screen width */
   }
 }
 
 @media (max-width: 992px) {
   .Intro-Image-Container img {
-    max-height: calc(var(--maxImageSize) * 0.8); /* Adjust image size based on screen width */
+    max-height: calc(
+      var(--maxImageSize) * 0.8
+    ); /* Adjust image size based on screen width */
   }
 }
 
 @media (max-width: 768px) {
   .Intro-Image-Container img {
-    max-height: calc(var(--maxImageSize) * 0.7); /* Adjust image size based on screen width */
+    max-height: calc(
+      var(--maxImageSize) * 0.7
+    ); /* Adjust image size based on screen width */
   }
 }
 
 @media (max-width: 576px) {
   .Intro-Image-Container img {
-    max-height: calc(var(--maxImageSize) * 0.6); /* Adjust image size based on screen width */
+    max-height: calc(
+      var(--maxImageSize) * 0.6
+    ); /* Adjust image size based on screen width */
   }
 }
 
 @media (max-width: 400px) {
   .Intro-Image-Container img {
-    max-height: var(--minImageSize); /* Set minimum height for the image for very small screens */
+    max-height: var(
+      --minImageSize
+    ); /* Set minimum height for the image for very small screens */
   }
 }

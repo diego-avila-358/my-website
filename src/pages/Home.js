@@ -11,59 +11,10 @@ import "../css/stylings.css";
 
 function Home() {
   return (
-    <div
-      className="Home-Container"
-      style={{
-        minHeight: "100%",
-        width: "100%",
-        position: "relative",
-        backgroundColor: "rgb(11,57,72)",
-        display: "flex",
-        flexFlow: "column",
-        alignItems: "center",
-        placeContent: "center flex-start",
-        overflow: "hidden",
-      }}
-    >
-      <div
-        className="Intro-Container"
-        style={{
-          placeContent: "center",
-          alignItems: "center",
-          backgroundColor: "rgb(217, 219, 241)",
-          display: "flex",
-          flexFlow: "row",
-          height: "100%",
-          overflow: "hidden",
-          position: "relative",
-          padding: "20px",
-          width: "100%",
-        }}
-      >
-        <div
-          className="Intro-Inner-Container"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            flexFlow: "column",
-            position: "relative",
-            placeContent: "center space-between",
-            width: "100%",
-            gap: "20px",
-          }}
-        >
-          <div
-            className="Intro-Nav-Container"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              height: "min-content",
-              position: "relative",
-              width: "100%",
-              justifyContent: "space-between",
-              flexDirection: "row",
-            }}
-          >
+    <div className="Home-Container">
+      <div className="Intro-Container">
+        <div className="Intro-Inner-Container">
+          <div className="Intro-Nav-Container">
             <div className="Header-Nav-Item">
               <Link>
                 <img
@@ -75,7 +26,7 @@ function Home() {
             </div>
 
             <div className="Header-Nav-Item">
-              <Link>Profile</Link>
+              <Link>Home</Link>
             </div>
             <div className="Header-Nav-Item">
               <Link>Projects</Link>
@@ -83,20 +34,38 @@ function Home() {
             <div className="Header-Nav-Item">
               <Link>Resume</Link>
             </div>
+            <div className="Header-Nav-Item">
+              <Link>Contacts</Link>
+            </div>
           </div>
-          <div
-            className="Intro-Content-Container"
-            style={{
-              display: "flex",
-              position: "relative",
-              width: "100%",
-              flexDirection: "column",
-            }}
-          >
+          <div className="Intro-Content-Container">
+            <div className="Intro-Name-Container">
+              <h1>Hi, I'm</h1>
+            </div>
+            <div>
+              <h1 style={{ fontWeight: "bold" }}>Diego Avila Perles Blanco</h1>
+            </div>
             <div className="Intro-Image-Container">
               <img src={currentImageofMe} alt="Me" />
             </div>
 
+            <div className="Intro-Buttons">
+              <button
+                type="button"
+                className="btn "
+                style={{ backgroundColor: "rgb(62, 92, 118)" }}
+              >
+                <a>Random Website I found</a>
+              </button>
+              <button
+                type="button"
+                className="btn"
+                style={{backgroundColor: "rgb(116, 140, 171)"}}>
+                <a>Random Personal Project</a>
+              </button>
+            </div>
+          </div>
+          <div className="About-Container">
 
           </div>
         </div>
