@@ -60,14 +60,61 @@ function Home() {
               <button
                 type="button"
                 className="btn"
-                style={{backgroundColor: "rgb(116, 140, 171)"}}>
+                style={{ backgroundColor: "rgb(116, 140, 171)" }}
+              >
                 <a>Random Personal Project</a>
               </button>
             </div>
           </div>
-          <div className="About-Container">
-
-          </div>
+        </div>
+      </div>
+      <div
+        className="About-Container"
+        style={{
+          padding: "60px 20px",
+          display: "flex",
+          alignItems: "flex-start",
+          justifyContent: "flex-start",
+          width: "100%",
+          backgroundColor: "rgb(29, 45, 68)",
+          flexDirection: "column",
+          gap: "40px",
+          height: "auto",
+        }}
+      >
+        <div className="About-Title" style={{ color: "rgb(240, 235, 216)" }}>
+          <h1>About Me</h1>
+        </div>
+        <div
+          className="About-Content"
+          style={{
+            color: "rgb(240, 235, 216)",
+            fontSize: "var(--maxFontSize)",
+            display: "flex",
+            flexDirection: "column",
+            gap: "40px",
+          }}
+        >
+          <p>
+            I am a recent Computer Science graduate from Rochester Institute of
+            Technology (RIT). I have a passion for technology and Software
+            Development. From a very young age, I have been facinated by the
+            interworkings of technology, always eager to create and learn how
+            various devices operate.
+          </p>
+          <p>
+            In addition to my interest in technology, I have always been
+            motivated by a desire to make a meaningful impact that benefits
+            others. My journey began with a strong interest in Biology, which
+            led me to complete an Associate of Science in Biology at South Texas
+            College. During this time, I became aware of the numerous
+            environmental issues caused by pollution, which deepend my
+            commitment to finding solutions that could address these challenges.
+          </p>
+          <p>
+            Realizing the potential for technology to address these issues, I continued my academic journey
+            at RIT where I completed a Bachelor of Science in Computer Science. 
+          </p>
         </div>
       </div>
     </div>
