@@ -87,7 +87,7 @@ function Home() {
                 <Link>Projects</Link>
               </div>
               <div className="Header-Nav-Item">
-                <a href="${process.env.PUBLIC_URL}/Resume.pdf">Resume</a>
+                <a href={`${process.env.PUBLIC_URL}/Resume.pdf`}>Resume</a>
               </div>
               <div className="Header-Nav-Item">
                 <Link>Contacts</Link>
