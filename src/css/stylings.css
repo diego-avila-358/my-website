@@ -1,6 +1,5 @@
 @import "@fontsource/nunito"; /* Importing the Nunito font */
 
-
 body,
 html {
   margin: 0;
@@ -27,11 +26,11 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(11,57,72);
-  overflow: hidden; 
+  background-color: rgb(11, 57, 72);
+  overflow: hidden;
 }
 
-.Intro-Container{
+.Intro-Container {
   justify-content: center;
   align-items: center;
   display: flex;
@@ -44,7 +43,7 @@ html {
   width: 100%;
 }
 
-.Intro-Inner-Container{
+.Intro-Inner-Container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,7 +52,7 @@ html {
   gap: 20px;
 }
 
-.Intro-Nav-Container{
+.Intro-Nav-Container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,8 +60,6 @@ html {
   height: min-content;
   width: 100%;
   position: relative;
-
-
 }
 
 .Header-Nav-Item {
@@ -73,7 +70,7 @@ html {
 
 .Header-Nav-Item a {
   color: rgb(62, 92, 118);
-  text-decoration: none ;
+  text-decoration: none;
   margin: 0 10px;
   transition: color 0.5s ease;
   font-family: nunito;
@@ -85,7 +82,7 @@ html {
   color: rgb(21, 68, 163);
 }
 
-.Intro-Content-Container{
+.Intro-Content-Container {
   display: flex;
   position: relative;
   width: 100%;
@@ -96,7 +93,7 @@ html {
   font-family: var(--font1);
 }
 
-.Intro-Buttons{
+.Intro-Buttons {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -104,7 +101,7 @@ html {
   padding-top: 20px;
 }
 
-.Intro-Buttons .btn{
+.Intro-Buttons .btn {
   color: white;
 }
 
@@ -113,167 +110,250 @@ html {
 }
 
 
+.Project-Grid {
+  grid-template-columns: repeat(
+    5,
+    auto
+  ); /* Adjust grid columns based on screen width */
+  gap: 10px;
+  position: relative;
+}
 
-/* Media query for adjusting font size based on screen width */
+.Project-Cell{
+  width: 100%;
+  height:200px;
+  padding-bottom: 10px;
+}
+.card{
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.card img:hover{
+  transform: scale(1.1);
+  opacity: 0.5;
+}
+
+.Footer-Emails{
+  font-size: calc(var(--maxFontSize) * 0.9);
+
+}
+
+
+/* Media query for max-width: 1200px */
 @media (max-width: 1200px) {
   .Header-Nav-Item a {
     font-size: calc(
       var(--maxFontSize) * 0.9
     ); /* Adjust font size based on screen width */
   }
-}
-
-@media (max-width: 992px) {
-  .Header-Nav-Item a {
-    font-size: calc(
-      var(--maxFontSize) * 0.8
-    ); /* Adjust font size based on screen width */
-  }
-}
-
-@media (max-width: 768px) {
-  .Header-Nav-Item a {
-    font-size: calc(
-      var(--maxFontSize) * 0.7
-    ); /* Adjust font size based on screen width */
-  }
-}
-
-@media (max-width: 576px) {
-  .Header-Nav-Item a {
-    font-size: calc(
-      var(--maxFontSize) * 0.6
-    ); /* Adjust font size based on screen width */
-  }
-}
-
-@media (max-width: 400px) {
-  .Header-Nav-Item a {
-    font-size: var(
-      --minFontSize
-    ); /* Set font size to min font size for very small screens */
-  }
-}
-
-/* Media query for adjusting image size based on screen width */
-@media (max-width: 1200px) {
   .Intro-Image-Container img {
     max-height: calc(
       var(--maxImageSize) * 0.9
     ); /* Adjust image size based on screen width */
   }
-}
-
-@media (max-width: 992px) {
-  .Intro-Image-Container img {
-    max-height: calc(
-      var(--maxImageSize) * 0.8
-    ); /* Adjust image size based on screen width */
-  }
-}
-
-@media (max-width: 768px) {
-  .Intro-Image-Container img {
-    max-height: calc(
-      var(--maxImageSize) * 0.7
-    ); /* Adjust image size based on screen width */
-  }
-}
-
-@media (max-width: 576px) {
-  .Intro-Image-Container img {
-    max-height: calc(
-      var(--maxImageSize) * 0.6
-    ); /* Adjust image size based on screen width */
-  }
-}
-
-@media (max-width: 400px) {
-  .Intro-Image-Container img {
-    max-height: var(
-      --minImageSize
-    ); /* Set minimum height for the image for very small screens */
-  }
-}
-
-/* Media query for adjusting image size based on screen width */
-@media (max-width: 1200px) {
-  .About-Container{
+  .About-Container {
     padding: calc(
       var(--padding1) * 0.9
-    ); /* Adjust image size based on screen width */
+    ); /* Adjust padding based on screen width */
   }
-}
-
-@media (max-width: 992px) {
-  .About-Container {
-    padding: calc(
-      var(--padding1) * 0.8
-    ); /* Adjust image size based on screen width */
-  }
-}
-
-@media (max-width: 768px) {
-  .About-Container {
-    padding: calc(
-      var(--padding1) * 0.7
-    ); /* Adjust image size based on screen width */
-  }
-}
-
-@media (max-width: 576px) {
-  .About-Container {
-    padding: calc(
-      var(--padding1) * 0.6
-    ); /* Adjust image size based on screen width */
-  }
-}
-
-@media (max-width: 400px) {
-  .About-Container {
-    padding: var(
-      --padding1
-    ); /* Set minimum height for the image for very small screens */
-  }
-}
-
-/* Media query for adjusting font size based on screen width */
-@media (max-width: 1200px) {
-  .About-Content p {
-    font-size: calc(
-      var(--maxFontSize) * 0.9
-    ); /* Adjust font size based on screen width */
-  }
-}
-
-@media (max-width: 992px) {
   .About-Content p {
     font-size: calc(
       var(--maxFontSize) * 0.8
     ); /* Adjust font size based on screen width */
   }
+  .Project-Title{
+    font-size: calc(
+      var(--maxFontSize) * 0.9
+    );
+  }
+  .Project-Grid {
+    grid-template-columns: repeat(
+      5,
+      auto
+    ); /* Adjust grid columns based on screen width */
+    gap: 10px;
+  }
+
+  .Footer-Emails{
+    font-size: calc(
+      var(--maxFontSize) * 0.9
+    );
+  }
+
+
+
 }
 
-@media (max-width: 768px) {
+/* Media query for max-width: 992px */
+@media (max-width: 992px) {
+  .Header-Nav-Item a {
+    font-size: calc(
+      var(--maxFontSize) * 0.8
+    ); /* Adjust font size based on screen width */
+  }
+  .Intro-Image-Container img {
+    max-height: calc(
+      var(--maxImageSize) * 0.8
+    ); /* Adjust image size based on screen width */
+  }
+  .About-Container {
+    padding: calc(
+      var(--padding1) * 0.8
+    ); /* Adjust padding based on screen width */
+  }
   .About-Content p {
     font-size: calc(
       var(--maxFontSize) * 0.7
     ); /* Adjust font size based on screen width */
   }
+  .Project-Title{
+    font-size: calc(
+      var(--maxFontSize) * 0.8
+    );
+  }
+  .Project-Grid {
+    grid-template-columns: repeat(
+      4,
+      auto
+    ); /* Adjust grid columns based on screen width */
+    gap: '10px'
+  }
+
+  .Footer-Emails{
+    font-size: calc(
+      var(--maxFontSize) * 0.8
+    );
+  }
+
 }
 
-@media (max-width: 576px) {
+/* Media query for max-width: 768px */
+@media (max-width: 768px) {
+  .Header-Nav-Item a {
+    font-size: calc(
+      var(--maxFontSize) * 0.7
+    ); /* Adjust font size based on screen width */
+  }
+  .Intro-Image-Container img {
+    max-height: calc(
+      var(--maxImageSize) * 0.7
+    ); /* Adjust image size based on screen width */
+  }
+  .About-Container {
+    padding: calc(
+      var(--padding1) * 0.7
+    ); /* Adjust padding based on screen width */
+  }
   .About-Content p {
     font-size: calc(
       var(--maxFontSize) * 0.6
     ); /* Adjust font size based on screen width */
   }
+  .Project-Title{
+    font-size: calc(
+      var(--maxFontSize) * 0.7
+    );
+  }
+  .Project-Grid {
+    grid-template-columns: repeat(3,auto); /* Adjust grid columns based on screen width */
+    gap: 10px;
+  }
+
+  .Footer-Emails{
+    font-size: calc(
+      var(--maxFontSize) * 0.7
+    );
+  }
+
 }
 
+/* Media query for max-width: 576px */
+@media (max-width: 576px) {
+  .Header-Nav-Item a {
+    font-size: calc(
+      var(--maxFontSize) * 0.6
+    ); /* Adjust font size based on screen width */
+  }
+  .Intro-Image-Container img {
+    max-height: calc(
+      var(--maxImageSize) * 0.6
+    ); /* Adjust image size based on screen width */
+  }
+  .About-Container {
+    padding: calc(
+      var(--padding1) * 0.6
+    ); /* Adjust padding based on screen width */
+  }
+  .About-Content p {
+    font-size: calc(
+      var(--maxFontSize) * 0.5
+    ); /* Adjust font size based on screen width */
+  }
+  .Project-Title{
+    font-size: calc(
+      var(--maxFontSize) * 0.6
+    );
+  }
+  .Project-Grid {
+    grid-template-columns: repeat(
+      2,
+      auto
+    ); /* Adjust grid columns based on screen width */
+    gap: 10px;
+  }
+
+  .Footer-Emails{
+    font-size: calc(
+      var(--maxFontSize) * 0.6
+    );
+  }
+
+}
+
+/* Media query for max-width: 400px */
 @media (max-width: 400px) {
+  .Header-Nav-Item a {
+    font-size: var(
+      --minFontSize
+    ); /* Set font size to min font size for very small screens */
+  }
+  .Intro-Image-Container img {
+    max-height: var(
+      --minImageSize
+    ); /* Set minimum height for the image for very small screens */
+  }
+  .About-Container {
+    padding: var(--padding1); /* Set padding for very small screens */
+  }
   .About-Content p {
     font-size: var(
       --minFontSize
     ); /* Set font size to min font size for very small screens */
+  }
+  .Project-Title{
+    font-size: var(--minFontSize);
+  }
+  .Project-Grid {
+    grid-template-columns: auto; /* Adjust grid columns for very small screens */
+    gap: 10px;
+  }
+
+  .Footer-Emails{
+    font-size: 
+      var(--minFontSize)
+    ;
   }
 }
