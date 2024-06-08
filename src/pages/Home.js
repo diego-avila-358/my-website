@@ -39,11 +39,12 @@ const LoadingScreen = () => (
 function Home() {
   const [isLoading, setIsLoading] = React.useState(true);
   React.useEffect(() => {
-    window.addEventListener("load", () => {
+    const timer = setTimeout(() => {
       setIsLoading(false);
-    });
-  }, []);
+    }, 3000); // Set loading duration to 3 seconds
 
+    return () => clearTimeout(timer); // Cleanup timer if component unmounts
+  }, []);
   const personalProjects = [
     "https://people.rit.edu/da8648/tessellation/tessellation.html",
     "https://people.rit.edu/da8648/transformation/transformation.html",
