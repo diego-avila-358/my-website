@@ -7,7 +7,7 @@ import Home from './pages/Home';
 
 function App() {
   return (
-    <Router basename='/my-website'>
+    <Router>
       <Routes>
         <Route path="/" element={<Home/>} />
       </Routes>
